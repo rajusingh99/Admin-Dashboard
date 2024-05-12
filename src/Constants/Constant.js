@@ -223,8 +223,9 @@ const menuItem ={
 const auth ={
     user,
 }
+
 const Constant = {
     auth,
-    menuItem
+    menuItem,
 }
 export default Constant
