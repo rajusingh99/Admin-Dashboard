@@ -5,19 +5,21 @@ import TopNav from './Components/Common/TopNav';
 import AdminLayout from './Layouts/AdminLayout';
 import AdminRoutes from './Routes/AdminRoutes';
 import NoPages from './Pages/Admin/components/NoPages';
+import Constant from './Constants/Constant';
 
 function App() {
   return (
     <Box className="App">
        <TopNav/>
-        <AdminLayout>
+        {Constant.auth.user.role ==='admin' &&  
+         <AdminLayout>
           <BrowserRouter>
               <Routes>
-                <Route path="/admin/*" element={<AdminRoutes />} />
+                {<Route path="/admin/*" element={<AdminRoutes />} />}
                 <Route path="*" element={<NoPages />} />
               </Routes>
           </BrowserRouter>
-        </AdminLayout>
+        </AdminLayout>}
     </Box>
   );
 }

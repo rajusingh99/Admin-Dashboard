@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Clinic from "../Pages/Admin/components/Clinic";
-import BusinessRoutes from "./BussinessRoutes";
+import BusinessRoutes from "./BusinessRoutes";
 import NoPages from "../Pages/Admin/components/NoPages";
 
 const AdminRoutes = () => {

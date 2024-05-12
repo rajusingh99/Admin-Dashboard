@@ -2,7 +2,6 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Card from '../Pages/Admin/components/Card'
 import VisitsRoutes from './VisitRoutes'
-import NoPages from '../Pages/Admin/components/NoPages'
 
 const BusinessRoutes = () => {
   return (
