@@ -1,13 +1,23 @@
 import './App.css';
-import {Box} from '@mui/material'
-import Admin from './Pages/Admin';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Box } from '@mui/material'
 import TopNav from './Components/Common/TopNav';
+import AdminLayout from './Layouts/AdminLayout';
+import AdminRoutes from './Routes/AdminRoutes';
+import NoPages from './Pages/Admin/components/NoPages';
 
 function App() {
   return (
     <Box className="App">
        <TopNav/>
-       <Admin/>
+        <AdminLayout>
+          <BrowserRouter>
+              <Routes>
+                <Route path="/admin/*" element={<AdminRoutes />} />
+                <Route path="*" element={<NoPages />} />
+              </Routes>
+          </BrowserRouter>
+        </AdminLayout>
     </Box>
   );
 }
