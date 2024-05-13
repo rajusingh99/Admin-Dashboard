@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Grid } from '@mui/material'
 import React from 'react'
 import Card from './Admin/components/Card'
 import fakeData from '../Constants/fakeData'
@@ -20,10 +20,10 @@ const Admin = () => {
         <Card data={fakeData.fourth}/>
       </Box>
       
-      <Box sx={cardStyle} paddingTop={'20px'}>
+      <Grid sx={cardStyle} paddingTop={'20px'} container>
         <AreaNumberCard/>
         <AreaGraphPart/>
-      </Box>
+      </Grid>
     </Box>
   )
 }
